@@ -1,0 +1,13 @@
+# ユーザー固有の設定・実行時に生成されるファイル
+src/Config.json
+src/tray_app_error.log
+
+# Claude Code
+# .claude/settings.json はチーム共有設定として追跡する。
+# settings.local.json は個人環境固有の上書き設定のためignore対象。
+.claude/settings.local.json
+
+# Windows / エディタ系の一般的な生成物
+Thumbs.db
+desktop.ini
+*.swp

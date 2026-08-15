@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1000" width="1040" height="1000" font-family="'Yu Gothic UI','Segoe UI','Hiragino Sans',sans-serif">
+  <defs>
+    <symbol id="chainIcon" viewBox="-20 -20 40 40">
+      <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#0364B8"/>
+      <g transform="rotate(45)">
+        <circle cx="-6" cy="0" r="8" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+        <circle cx="6" cy="0" r="8" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+        <line x1="-6" y1="0" x2="6" y2="0" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <rect x="0" y="0" width="1040" height="1000" fill="#ffffff"/>
+
+  <!-- header -->
+  <rect x="0" y="0" width="1040" height="140" fill="#EFF6FC"/>
+  <use href="#chainIcon" x="55" y="35" width="70" height="70"/>
+  <text x="150" y="65" font-size="23" font-weight="bold" fill="#0364B8">Microsoft 365 Teams / SharePoint を OneDriveでローカル同期し、</text>
+  <text x="150" y="100" font-size="23" font-weight="bold" fill="#0364B8">エクスプローラで「ファイルサーバー」のようにチーム作業している皆さんへ</text>
+
+  <!-- intro: monitor icon + speech bubble -->
+  <g transform="translate(70,175)">
+    <rect x="25" y="95" width="20" height="14" fill="#605E5C"/>
+    <rect x="5" y="109" width="60" height="8" rx="4" fill="#605E5C"/>
+    <rect x="0" y="0" width="110" height="92" rx="6" fill="#2B579A"/>
+    <rect x="8" y="8" width="94" height="76" rx="3" fill="#ffffff"/>
+    <rect x="8" y="8" width="94" height="14" fill="#E1DFDD"/>
+    <circle cx="15" cy="15" r="2" fill="#C7C6C4"/>
+    <circle cx="21" cy="15" r="2" fill="#C7C6C4"/>
+    <circle cx="27" cy="15" r="2" fill="#C7C6C4"/>
+    <rect x="16" y="32" width="70" height="6" rx="2" fill="#E1DFDD"/>
+    <rect x="16" y="46" width="70" height="6" rx="2" fill="#E1DFDD"/>
+    <rect x="16" y="60" width="45" height="6" rx="2" fill="#E1DFDD"/>
+    <!-- OneDrive sync badge -->
+    <circle cx="98" cy="88" r="17" fill="#0364B8" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="98" cy="88" r="8" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-dasharray="4 3"/>
+    <polygon points="103,80 109,82 104,87" fill="#ffffff"/>
+    <!-- Teams badge -->
+    <rect x="82" y="-12" width="30" height="30" rx="7" fill="#5059C9" stroke="#ffffff" stroke-width="3"/>
+    <text x="97" y="9" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">T</text>
+  </g>
+
+  <g>
+    <path d="M 255 250 L 235 270 L 255 270 Z" fill="#ffffff" stroke="#C7E0F4" stroke-width="2"/>
+    <rect x="250" y="180" width="730" height="130" rx="16" fill="#ffffff" stroke="#C7E0F4" stroke-width="2"/>
+    <text x="285" y="235" font-size="22" fill="#201F1E">チームメンバーにファイルの場所を伝えるとき、</text>
+    <text x="285" y="270" font-size="22" fill="#201F1E">いつもこんな思いをしていませんか？</text>
+  </g>
+
+  <!-- pain point cards -->
+  <!-- card 1 -->
+  <g>
+    <rect x="40" y="340" width="460" height="200" rx="14" fill="#ffffff" stroke="#E1DFDD" stroke-width="2"/>
+    <circle cx="90" cy="390" r="30" fill="#FDE7E9"/>
+    <circle cx="90" cy="390" r="16" fill="none" stroke="#D83B01" stroke-width="4"/>
+    <line x1="79" y1="379" x2="101" y2="401" stroke="#D83B01" stroke-width="4" stroke-linecap="round"/>
+    <text x="135" y="382" font-size="19" font-weight="bold" fill="#201F1E">右クリック→パスのコピー</text>
+    <text x="70" y="452" font-size="16" fill="#605E5C">ローカルPC上の絶対パスになってしまい、</text>
+    <text x="70" y="480" font-size="16" fill="#605E5C">そのままではリンクとして開けない…</text>
+  </g>
+
+  <!-- card 2 -->
+  <g>
+    <rect x="540" y="340" width="460" height="200" rx="14" fill="#ffffff" stroke="#E1DFDD" stroke-width="2"/>
+    <circle cx="590" cy="390" r="30" fill="#E8F1FB"/>
+    <g transform="translate(590,390) rotate(45)">
+      <circle cx="-6" cy="0" r="8" fill="none" stroke="#0364B8" stroke-width="4"/>
+      <circle cx="6" cy="0" r="8" fill="none" stroke="#0364B8" stroke-width="4"/>
+      <line x1="-6" y1="0" x2="6" y2="0" stroke="#0364B8" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <circle cx="608" cy="374" r="10" fill="#0364B8"/>
+    <text x="608" y="378" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">?</text>
+    <text x="635" y="373" font-size="19" font-weight="bold" fill="#201F1E">右クリック→[リンクのコピー]</text>
+    <text x="635" y="397" font-size="19" font-weight="bold" fill="#201F1E">（OneDriveの機能）</text>
+    <text x="570" y="452" font-size="16" fill="#605E5C">リンクは取れるけれど、ファイル名だけ。</text>
+    <text x="570" y="480" font-size="16" fill="#605E5C">どのフォルダの中にあるのか分からない…</text>
+  </g>
+
+  <!-- card 3 -->
+  <g>
+    <rect x="40" y="570" width="460" height="200" rx="14" fill="#ffffff" stroke="#E1DFDD" stroke-width="2"/>
+    <circle cx="90" cy="620" r="30" fill="#FFF4CE"/>
+    <path d="M 90 604 L 105 630 L 75 630 Z" fill="#FFB900"/>
+    <text x="90" y="627" font-size="15" font-weight="bold" fill="#605E5C" text-anchor="middle">!</text>
+    <text x="135" y="603" font-size="19" font-weight="bold" fill="#201F1E">実は[リンクのコピー]は</text>
+    <text x="135" y="627" font-size="19" font-weight="bold" fill="#201F1E">共有リンクの発行</text>
+    <text x="70" y="682" font-size="16" fill="#605E5C">チーム外の人にもアクセス権が付与される。</text>
+    <text x="70" y="710" font-size="16" fill="#605E5C">乱発するとセキュリティ的にも心配…</text>
+  </g>
+
+  <!-- card 4 -->
+  <g>
+    <rect x="540" y="570" width="460" height="200" rx="14" fill="#ffffff" stroke="#E1DFDD" stroke-width="2"/>
+    <circle cx="590" cy="620" r="30" fill="#DFF6DD"/>
+    <circle cx="590" cy="614" r="12" fill="#FFB900"/>
+    <rect x="585" y="624" width="10" height="8" fill="#C7C6C4"/>
+    <line x1="590" y1="596" x2="590" y2="590" stroke="#FFB900" stroke-width="3" stroke-linecap="round"/>
+    <line x1="578" y1="602" x2="573" y2="597" stroke="#FFB900" stroke-width="3" stroke-linecap="round"/>
+    <line x1="602" y1="602" x2="607" y2="597" stroke="#FFB900" stroke-width="3" stroke-linecap="round"/>
+    <text x="635" y="615" font-size="19" font-weight="bold" fill="#201F1E">欲しいのは、両方いっぺんに</text>
+    <text x="570" y="682" font-size="16" fill="#605E5C">チーム内の相対パス表示 ＋</text>
+    <text x="570" y="710" font-size="16" fill="#605E5C">クリックで開けるリンクの両方！</text>
+  </g>
+
+  <!-- wish quote -->
+  <g>
+    <rect x="60" y="790" width="920" height="90" rx="14" fill="#FFF9E6" stroke="#FFE9A8" stroke-width="2"/>
+    <text x="100" y="828" font-size="19" fill="#8A6D00">あー、チーム内の相対パスをぱっと取りつつ、読み手がクリックで</text>
+    <text x="100" y="856" font-size="19" fill="#8A6D00">すぐ開けるリンクも欲しいんだよなぁ…！</text>
+  </g>
+
+  <!-- closing -->
+  <g>
+    <text x="520" y="935" font-size="22" font-weight="bold" fill="#201F1E" text-anchor="middle">そんな課題を解決するツールのご紹介です</text>
+    <path d="M 520 950 L 520 980 M 508 968 L 520 982 L 532 968" fill="none" stroke="#0364B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
