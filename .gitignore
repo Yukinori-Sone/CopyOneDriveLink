@@ -2,6 +2,9 @@
 src/Config.json
 src/tray_app_error.log
 
+# 配布用zipの出力先（setup/Build-ReleaseZip.ps1が生成）
+dist/
+
 # Claude Code
 # .claude/settings.json はチーム共有設定として追跡する。
 # settings.local.json は個人環境固有の上書き設定のためignore対象。
