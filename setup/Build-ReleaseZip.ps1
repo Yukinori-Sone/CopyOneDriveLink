@@ -8,6 +8,9 @@
     src/Config.json・src/tray_app_error.log等のユーザー環境固有ファイル、
     このビルドスクリプト自身。
 
+    解凍時に各ファイルが直接バラまかれないよう、zip内のトップレベルは
+    "CopyOneDriveLink" フォルダで包む。
+
     出力先は distフォルダ（gitignore対象）。バージョン番号はsrc/Version.psd1から
     読み取る。
 .NOTES
@@ -23,11 +26,13 @@ $versionInfo = Import-PowerShellDataFile (Join-Path $repoRoot "src\Version.psd1"
 $version = $versionInfo.Version
 
 $distDir = Join-Path $repoRoot "dist"
-$stagingDir = Join-Path $distDir "staging_CopyOneDriveLink"
+$stagingRoot = Join-Path $distDir "staging"
+# このフォルダ名がそのままzip内のトップレベルフォルダ名になる
+$stagingDir = Join-Path $stagingRoot "CopyOneDriveLink"
 $zipPath = Join-Path $distDir ("CopyOneDriveLink-{0}.zip" -f $version)
 
-if (Test-Path $stagingDir) {
-    Remove-Item -Path $stagingDir -Recurse -Force
+if (Test-Path $stagingRoot) {
+    Remove-Item -Path $stagingRoot -Recurse -Force
 }
 New-Item -Path $stagingDir -ItemType Directory -Force | Out-Null
 
@@ -58,9 +63,11 @@ Copy-Item -Path (Join-Path $repoRoot "setup\Install.bat") -Destination (Join-Pat
 if (Test-Path $zipPath) {
     Remove-Item -Path $zipPath -Force
 }
-Compress-Archive -Path (Join-Path $stagingDir "*") -DestinationPath $zipPath
+# $stagingDir の「中身(\*)」ではなく $stagingDir 自体を指定することで、
+# フォルダ名("CopyOneDriveLink")がzip内のトップレベルとして保持される
+Compress-Archive -Path $stagingDir -DestinationPath $zipPath
 
-Remove-Item -Path $stagingDir -Recurse -Force
+Remove-Item -Path $stagingRoot -Recurse -Force
 
 Write-Output ""
 Write-Output "作成しました: $zipPath"
